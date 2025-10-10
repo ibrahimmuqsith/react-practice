@@ -1,0 +1,25 @@
+{
+  "name": "react-practice",
+  "version": "1.0.0",
+  "description": "This is a React practice",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ibrahimmuqsith/react-practice.git"
+  },
+  "keywords": [
+    "reactJS"
+  ],
+  "author": "Muqsith Ibrahim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ibrahimmuqsith/react-practice/issues"
+  },
+  "homepage": "https://github.com/ibrahimmuqsith/react-practice#readme",
+  "devDependencies": {
+    "parcel": "^2.16.0"
+  }
+}
