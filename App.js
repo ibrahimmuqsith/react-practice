@@ -1,3 +1,6 @@
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+
 const heading = React.createElement(
     'h1',
     {
@@ -10,7 +13,7 @@ const heading = React.createElement(
 
 const parent = React.createElement('div', { id: 'container' },
     [
-        React.createElement('div', { id: 'parent1', key: 'parent2' },
+        React.createElement('div', { id: 'parent1', key: 'parent1' },
             [
                 React.createElement('h1', { id: 'heading1', key: 'heading1' }, "this is parent1 - H1 tag"),
                 React.createElement('h2', { id: 'heading2', key: 'heading2' }, "this is parent1 - H2 tag"),
