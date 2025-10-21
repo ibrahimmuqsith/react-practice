@@ -1,4 +1,4 @@
-import IMG_CDN_URL from '../utils/constants'
+import { CDN_URL } from '../utils/constants'
 
 const RestaurantCard = (props) => {
     const { name, cuisines, rating, deliveryTime, imgCdn } = props
@@ -8,8 +8,7 @@ const RestaurantCard = (props) => {
             <img
                 alt='restaurantImg'
                 className='restaurantImg'
-                src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${imgCdn}`}
-            // src={`${IMG_CDN_URL}${imgCdn}`}
+                src={CDN_URL + imgCdn}
             />
             <div className='restaurantInfo'>
                 {/* <h5> {cuisines.join(' | ')} </h5> */}

@@ -1,4 +1,5 @@
 import React from "react"
+import { CDN_LOGO } from '../utils/constants'
 
 const Header = () => {
     return (
@@ -7,7 +8,7 @@ const Header = () => {
                 <img
                     alt='logo'
                     className='logo'
-                    src='https://static.vecteezy.com/system/resources/previews/011/405/724/non_2x/call-food-logo-design-food-delivery-service-logo-concept-free-vector.jpg'
+                    src={CDN_LOGO}
                 />
             </div>
             <div className='navBar'>
