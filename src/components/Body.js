@@ -1,7 +1,7 @@
 import RestaurantCard from './RestaurantCard'
 import RESTAURANT_DATA from '../utils/mockData'
 
-const Body = () => {
+export const Body = () => {
     return (
         <div className='bodyContainer'>
             <div className='searchBar'>
@@ -23,5 +23,3 @@ const Body = () => {
         </div>
     )
 }
-
-export default Body

@@ -1,7 +1,7 @@
 import React from "react"
 import { CDN_LOGO } from '../utils/constants'
 
-const Header = () => {
+export const Header = () => {
     return (
         <div className='header'>
             <div className='logoContainer'>
@@ -23,5 +23,3 @@ const Header = () => {
         </div>
     )
 }
-
-export default Header
