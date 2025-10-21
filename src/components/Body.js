@@ -1,5 +1,5 @@
 import RestaurantCard from './RestaurantCard'
-import staticJson from '/src/data.json'
+import RESTAURANT_DATA from '../utils/mockData'
 
 const Body = () => {
     return (
@@ -8,7 +8,7 @@ const Body = () => {
                 Search
             </div>
             <div className='restContainer'>
-                {staticJson.map(rest => (
+                {RESTAURANT_DATA.map(rest => (
                     <RestaurantCard
                         // imgSrc={resImg}
                         key={rest.info.id}

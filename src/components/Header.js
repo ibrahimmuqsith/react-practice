@@ -1,6 +1,4 @@
 import React from "react"
-import { RestaurantCard } from "../App"
-import staticJson from '/src/data.json'
 
 const Header = () => {
     return (

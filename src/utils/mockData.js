@@ -1,4 +1,4 @@
-[
+const RESTAURANT_DATA = [
     {
         "info": {
             "id": "12808",
@@ -1640,3 +1640,5 @@
         }
     }
 ]
+
+export default RESTAURANT_DATA
