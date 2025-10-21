@@ -1,55 +1,3 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-
-import staticJson from './data.json'
-import './index.scss'
-
-const Header = () => {
-    return (
-        <div className='header'>
-            <div className='logoContainer'>
-                <img
-                    alt='logo'
-                    className='logo'
-                    src='https://static.vecteezy.com/system/resources/previews/011/405/724/non_2x/call-food-logo-design-food-delivery-service-logo-concept-free-vector.jpg'
-                />
-            </div>
-            <div className='navBar'>
-                <ul>
-                    <li> Home </li>
-                    <li> About </li>
-                    <li> Profile </li>
-                    <li> Cart </li>
-                </ul>
-
-            </div>
-        </div>
-    )
-}
-
-const Body = () => {
-    return (
-        <div className='bodyContainer'>
-            <div className='searchBar'>
-                Search
-            </div>
-            <div className='restContainer'>
-                {staticJson.map(rest => (
-                    <RestaurantCard
-                        imgSrc={resImg}
-                        key={rest.info.id}
-                        name={rest.info.name}
-                        cuisines={rest.info.cuisines}
-                        rating={rest.info.avgRating}
-                        imgCdn={rest.info.cloudinaryImageId}
-                        deliveryTime={rest.info.sla.deliveryTime}
-                    />
-                ))}
-            </div>
-        </div>
-    )
-}
-
 const RestaurantCard = (props) => {
     const { name, cuisines, rating, deliveryTime, imgCdn } = props
     return (
@@ -71,15 +19,4 @@ const RestaurantCard = (props) => {
     )
 }
 
-const App = () => {
-    return (
-        <div className='app'>
-            <Header />
-            <Body />
-            {/* <Footer /> */}
-        </div>
-    )
-}
-
-const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(<App />)
+export default RestaurantCard
