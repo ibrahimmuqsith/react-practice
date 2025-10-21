@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/ibrahimmuqsith/react-practice#readme",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.16.0",
     "parcel": "^2.16.0"
   },
   "dependencies": {
