@@ -35,6 +35,13 @@
         width: max-content;
         cursor: pointer;
 
+        .restaurantImg {
+            min-width: 25 0px;
+            max-width: 250px;
+            min-height: 250px;
+            max-height: 250px;
+        }
+
         .restaurantInfo {
             display: flex;
             align-items: center;
