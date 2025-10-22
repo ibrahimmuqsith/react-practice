@@ -1,16 +1,32 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import RestaurantCard from './RestaurantCard'
 import RESTAURANT_DATA from '../utils/mockData'
+import { RESTAURANT_API } from '../utils/constants'
 
 export const Body = () => {
-    const [restList, setRestList] = useState(RESTAURANT_DATA)
+    const [restaurantList, setRestaurantList] = useState([])
+
+    useEffect(() => {
+        fetchData();
+    }, [])
+
+    const fetchData = async () => {
+        const response = await fetch(RESTAURANT_API)
+        const data = await response.json()
+        const { card: { card: { gridElements: { infoWithStyle: { restaurants = [] } } } } } = data?.data?.cards[4]
+        setRestaurantList(restaurants)
+    }
 
     const filterTopRestaurants = () => {
-        const filteredRest = restList.filter(item => {
+        const filteredRest = restaurantList.filter(item => {
             return item.info.avgRating > 4
         })
-        setRestList(filteredRest)
+        setRestaurantList(filteredRest)
+    }
+
+    if (restaurantList.length === 0) {
+        return <h1 className='loading'> Loading ....... </h1>
     }
 
     return (
@@ -24,13 +40,13 @@ export const Body = () => {
                 </button>
                 <button
                     className='filter-btn'
-                    onClick={() => { setRestList(RESTAURANT_DATA) }}
+                    onClick={() => { setRestaurantList(RESTAURANT_DATA) }}
                 >
                     RESET
                 </button>
             </div>
             <div className='restContainer'>
-                {restList.map(rest => (
+                {restaurantList.map(rest => (
                     <RestaurantCard
                         key={rest.info.id}
                         name={rest.info.name}
