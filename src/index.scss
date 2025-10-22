@@ -22,6 +22,16 @@
     }
 }
 
+.filterContainer {
+    .filter-btn {
+        margin: 15px;
+        padding: 15px;
+        border-radius: 5px;
+        background: #eaeaea;
+        border: 1px solid gainsboro;
+    }
+}
+
 /* card */
 .restContainer {
     display: grid;

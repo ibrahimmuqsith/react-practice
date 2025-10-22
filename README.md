@@ -14,3 +14,6 @@ Footer
     T&C
     Contact details
     Privacy
+
+Hooks
+    Filtering top rated restaurant (rating more than 4*)

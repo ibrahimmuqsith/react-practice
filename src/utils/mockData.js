@@ -13,9 +13,9 @@ const RESTAURANT_DATA = [
                 "Sweets",
                 "Chinese"
             ],
-            "avgRating": 4.6,
+            "avgRating": 3.7,
             "parentId": "22",
-            "avgRatingString": "4.6",
+            "avgRatingString": "3.7",
             "totalRatingsString": "33K+",
             "sla": {
                 "deliveryTime": 31,
@@ -100,10 +100,10 @@ const RESTAURANT_DATA = [
                 "Desserts",
                 "Bakery"
             ],
-            "avgRating": 4.6,
+            "avgRating": 3.7,
             "veg": true,
             "parentId": "3807",
-            "avgRatingString": "4.6",
+            "avgRatingString": "3.7",
             "totalRatingsString": "3.2K+",
             "sla": {
                 "deliveryTime": 33,
@@ -183,10 +183,10 @@ const RESTAURANT_DATA = [
             "cuisines": [
                 "Sweets"
             ],
-            "avgRating": 4.7,
+            "avgRating": 3.7,
             "veg": true,
             "parentId": "4700",
-            "avgRatingString": "4.7",
+            "avgRatingString": "3.7",
             "totalRatingsString": "6.8K+",
             "sla": {
                 "deliveryTime": 24,
@@ -268,9 +268,9 @@ const RESTAURANT_DATA = [
                 "Bakery",
                 "Beverages"
             ],
-            "avgRating": 4.6,
+            "avgRating": 3.7,
             "parentId": "1040",
-            "avgRatingString": "4.6",
+            "avgRatingString": "3.7",
             "totalRatingsString": "6.3K+",
             "sla": {
                 "deliveryTime": 13,
@@ -477,10 +477,10 @@ const RESTAURANT_DATA = [
                 "Chaat",
                 "Beverages"
             ],
-            "avgRating": 4.6,
+            "avgRating": 3.7,
             "veg": true,
             "parentId": "4284",
-            "avgRatingString": "4.6",
+            "avgRatingString": "3.7",
             "totalRatingsString": "38K+",
             "sla": {
                 "deliveryTime": 33,
@@ -740,9 +740,9 @@ const RESTAURANT_DATA = [
                 "Salads",
                 "Burgers"
             ],
-            "avgRating": 4.6,
+            "avgRating": 3.7,
             "parentId": "335529",
-            "avgRatingString": "4.6",
+            "avgRatingString": "3.7",
             "totalRatingsString": "956",
             "sla": {
                 "deliveryTime": 34,
@@ -815,10 +815,10 @@ const RESTAURANT_DATA = [
                 "Italian",
                 "Desserts"
             ],
-            "avgRating": 4.6,
+            "avgRating": 3.7,
             "veg": true,
             "parentId": "281782",
-            "avgRatingString": "4.6",
+            "avgRatingString": "3.7",
             "totalRatingsString": "2.6K+",
             "sla": {
                 "deliveryTime": 22,
@@ -1473,9 +1473,9 @@ const RESTAURANT_DATA = [
                 "Bakery",
                 "Fast Food"
             ],
-            "avgRating": 4.7,
+            "avgRating": 3.7,
             "parentId": "1",
-            "avgRatingString": "4.7",
+            "avgRatingString": "3.7",
             "totalRatingsString": "181",
             "sla": {
                 "deliveryTime": 32,
