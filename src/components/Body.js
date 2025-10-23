@@ -7,6 +7,7 @@ import { RESTAURANT_API } from '../utils/constants'
 
 export const Body = () => {
     const [restaurantList, setRestaurantList] = useState([])
+    const [searchText, setSearchText] = useState('')
 
     useEffect(() => {
         fetchData();
@@ -26,6 +27,10 @@ export const Body = () => {
         setRestaurantList(filteredRest)
     }
 
+    const searchRestaurantList = () => {
+        console.log("searchText = ", searchText)
+    }
+
     if (restaurantList.length === 0) {
         return (
             <Shimmer
@@ -38,19 +43,35 @@ export const Body = () => {
 
     return (
         <div className='bodyContainer'>
-            <div className='filterContainer'>
-                <button
-                    className='filter-btn'
-                    onClick={() => { filterTopRestaurants() }}
-                >
-                    Top Restaurants
-                </button>
-                <button
-                    className='filter-btn'
-                    onClick={() => { setRestaurantList(RESTAURANT_DATA) }}
-                >
-                    RESET
-                </button>
+            <div className='banner'>
+                <div className='searchContainer'>
+                    <input
+                        type='text'
+                        placeholder='Search Cafe'
+                        value={searchText}
+                        onChange={(e) => { setSearchText(e.target.value) }}
+                    >
+                    </input>
+                    <button
+                        onClick={() => { searchRestaurantList() }}
+                    >
+                        Search
+                    </button>
+                </div>
+                <div className='filterContainer'>
+                    <button
+                        className='filter-btn'
+                        onClick={() => { filterTopRestaurants() }}
+                    >
+                        Top Restaurants
+                    </button>
+                    <button
+                        className='filter-btn'
+                        onClick={() => { setRestaurantList(RESTAURANT_DATA) }}
+                    >
+                        RESET
+                    </button>
+                </div>
             </div>
             <div className='restContainer'>
                 {restaurantList.map(rest => (
