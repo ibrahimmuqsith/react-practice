@@ -2,7 +2,7 @@ Header
     Logo
     NavBar
 Body
-    SearchBar
+    Filter
     Restaurant
         Restaurant Name
         Restaurant Picture
@@ -16,4 +16,11 @@ Footer
     Privacy
 
 Hooks
-    Filtering top rated restaurant (rating more than 4*)
+    useState        - Filtering top rated restaurant (rating more than 4*)
+    useEffect       - Made API call after rendering the component.
+
+APIs
+    restaurants     - fetched restaurants List Data from swiggy
+
+UX/UI
+    Shimmer Loader  - created a customer shimmer comp to show loading

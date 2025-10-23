@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 
+import Shimmer from './Shimmer'
 import RestaurantCard from './RestaurantCard'
 import RESTAURANT_DATA from '../utils/mockData'
 import { RESTAURANT_API } from '../utils/constants'
@@ -26,7 +27,13 @@ export const Body = () => {
     }
 
     if (restaurantList.length === 0) {
-        return <h1 className='loading'> Loading ....... </h1>
+        return (
+            <Shimmer
+                cards={8}
+                width={300}
+                height={250}
+            />
+        )
     }
 
     return (
