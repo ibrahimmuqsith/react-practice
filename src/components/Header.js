@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+// import logo from '../../assets/logo.png'
 import { CDN_LOGO } from '../utils/constants'
 
 export const Header = () => {
@@ -10,6 +11,7 @@ export const Header = () => {
                 <img
                     alt='logo'
                     className='logo'
+                    // src={logo}
                     src={CDN_LOGO}
                 />
             </div>
