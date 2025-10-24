@@ -6,6 +6,7 @@ import RESTAURANT_DATA from '../utils/mockData'
 import { RESTAURANT_API } from '../utils/constants'
 
 export const Body = () => {
+    const [allRestaurants, setAllRestaurants] = useState([])
     const [restaurantList, setRestaurantList] = useState([])
     const [searchText, setSearchText] = useState('')
 
@@ -18,6 +19,7 @@ export const Body = () => {
             const response = await fetch(RESTAURANT_API)
             const data = await response.json()
             const { card: { card: { gridElements: { infoWithStyle: { restaurants = [] } } } } } = data?.data?.cards[4]
+            setAllRestaurants(restaurants)
             setRestaurantList(restaurants)
         } catch (err) {
             console.log('something went Wrong', err)
@@ -33,7 +35,12 @@ export const Body = () => {
     }
 
     const searchRestaurantList = () => {
-        console.log("searchText = ", searchText)
+        const filteredRest = allRestaurants.filter(item => {
+            return (item?.info?.name).toLowerCase().includes(searchText.toLowerCase())
+        })
+        if (filteredRest.length) {
+            setRestaurantList(filteredRest)
+        }
     }
 
     if (restaurantList.length === 0) {
