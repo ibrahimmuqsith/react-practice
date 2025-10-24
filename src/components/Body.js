@@ -80,13 +80,13 @@ export const Body = () => {
                 </div>
                 <div className='filterContainer'>
                     <button
-                        className='filter-btn'
+                        style={{ marginLeft: '10px' }}
                         onClick={() => { filterTopRestaurants() }}
                     >
                         Top Restaurants
                     </button>
                     <button
-                        className='filter-btn'
+                        style={{ marginLeft: '10px' }}
                         onClick={() => { resetFilters() }}
                     >
                         Reset
