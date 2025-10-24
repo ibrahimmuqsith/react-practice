@@ -40,6 +40,8 @@ export const Body = () => {
         })
         if (filteredRest.length) {
             setRestaurantList(filteredRest)
+        } else {
+            alert('Oops!! Data Not Found')
         }
     }
 
