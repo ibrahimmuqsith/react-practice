@@ -5,15 +5,15 @@
     border: 1px solid gainsboro;
 
     .logoContainer img {
-        width: 150px;
+        width: 60px;
     }
 
     .navBar ul {
         display: flex;
-        margin: 40px;
+        margin: 10px;
 
         li {
-            font-size: 30px;
+            font-size: 20px;
             margin: 0 10px;
             list-style: none;
             padding: 10px;
@@ -37,14 +37,20 @@
     justify-content: space-between;
     border: 1px solid gainsboro;
 
+    .searchContainer {
+        input {
+            margin-right: 15px;
+        }
+    }
+
     .filterContainer {
         align-items: center;
         display: flex;
         justify-content: flex-end;
 
         .filter-btn {
-            margin: 15px;
-            padding: 15px;
+            padding: 5px;
+            margin-left: 15px;
             border-radius: 5px;
             background: #eaeaea;
             border: 1px solid gainsboro;

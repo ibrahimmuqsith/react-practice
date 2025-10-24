@@ -46,6 +46,7 @@ export const Body = () => {
             <div className='banner'>
                 <div className='searchContainer'>
                     <input
+                        name='search'
                         type='text'
                         placeholder='Search Cafe'
                         value={searchText}
@@ -69,7 +70,7 @@ export const Body = () => {
                         className='filter-btn'
                         onClick={() => { setRestaurantList(RESTAURANT_DATA) }}
                     >
-                        RESET
+                        Reset
                     </button>
                 </div>
             </div>
