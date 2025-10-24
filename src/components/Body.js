@@ -43,6 +43,11 @@ export const Body = () => {
         }
     }
 
+    const resetFilters = () => {
+        setSearchText('')
+        setRestaurantList(allRestaurants)
+    }
+
     if (restaurantList.length === 0) {
         return (
             <Shimmer
@@ -80,7 +85,7 @@ export const Body = () => {
                     </button>
                     <button
                         className='filter-btn'
-                        onClick={() => { setRestaurantList(RESTAURANT_DATA) }}
+                        onClick={() => { resetFilters() }}
                     >
                         Reset
                     </button>
