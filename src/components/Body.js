@@ -14,10 +14,15 @@ export const Body = () => {
     }, [])
 
     const fetchData = async () => {
-        const response = await fetch(RESTAURANT_API)
-        const data = await response.json()
-        const { card: { card: { gridElements: { infoWithStyle: { restaurants = [] } } } } } = data?.data?.cards[4]
-        setRestaurantList(restaurants)
+        try {
+            const response = await fetch(RESTAURANT_API)
+            const data = await response.json()
+            const { card: { card: { gridElements: { infoWithStyle: { restaurants = [] } } } } } = data?.data?.cards[4]
+            setRestaurantList(restaurants)
+        } catch (err) {
+            console.log('something went Wrong', err)
+        }
+
     }
 
     const filterTopRestaurants = () => {
