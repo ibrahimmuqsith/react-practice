@@ -6,6 +6,7 @@ import Header from './components/Header'
 import Body from './components/Body'
 import About from './components/About'
 import Contact from './components/Contact'
+import Error from './utils/Error'
 
 import './index.scss'
 
@@ -23,7 +24,8 @@ const App = () => {
 const appRouter = createBrowserRouter([
     {
         path: '/',
-        element: <App />
+        element: <App />,
+        errorElement: <Error />
     },
     {
         path: '/about',
