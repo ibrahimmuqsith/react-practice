@@ -29,7 +29,7 @@ export const Body = () => {
 
     const filterTopRestaurants = () => {
         const filteredRest = restaurantList.filter(item => {
-            return item.info.avgRating > 4.2
+            return item.info.avgRating > 4
         })
         setRestaurantList(filteredRest)
     }
