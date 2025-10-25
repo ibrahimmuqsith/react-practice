@@ -2,7 +2,7 @@ import React, { useState } from "react"
 // import logo from '../../assets/logo.png'
 import { CDN_LOGO } from '../utils/constants'
 
-export const Header = () => {
+const Header = () => {
     const [loginStatus, setLoginStatus] = useState('Login')
 
     return (
@@ -34,3 +34,5 @@ export const Header = () => {
         </div>
     )
 }
+
+export default Header

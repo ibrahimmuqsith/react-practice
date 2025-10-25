@@ -5,7 +5,7 @@ import RestaurantCard from './RestaurantCard'
 import RESTAURANT_DATA from '../utils/mockData'
 import { RESTAURANT_API } from '../utils/constants'
 
-export const Body = () => {
+const Body = () => {
     const [allRestaurants, setAllRestaurants] = useState([])
     const [restaurantList, setRestaurantList] = useState([])
     const [searchText, setSearchText] = useState('')
@@ -108,3 +108,5 @@ export const Body = () => {
         </div>
     )
 }
+
+export default Body
