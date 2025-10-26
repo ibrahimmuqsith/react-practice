@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 // import logo from '../../assets/logo.png'
 import { CDN_LOGO } from '../utils/constants'
+import { Link } from "react-router-dom"
 
 const Header = () => {
     const [loginStatus, setLoginStatus] = useState('Login')
@@ -17,10 +18,10 @@ const Header = () => {
             </div>
             <div className='navBar'>
                 <ul>
-                    <li> Home </li>
-                    <li> About </li>
+                    <li> <Link to="/"> Home </Link> </li>
+                    <li> <Link to="/about"> About </Link> </li>
+                    <li> <Link to="/contact"> Contact </Link> </li>
                     <li> Profile </li>
-                    <li> Cart </li>
                     <li
                         className="login"
                         onClick={() => {
