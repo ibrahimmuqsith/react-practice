@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 // import logo from '../../assets/logo.png'
-import { CDN_LOGO } from '../utils/constants'
+import { URL_IMG_LOGO } from '../utils/constants'
 import { Link } from "react-router-dom"
 
 const Header = () => {
@@ -13,7 +13,7 @@ const Header = () => {
                     alt='logo'
                     className='logo'
                     // src={logo}
-                    src={CDN_LOGO}
+                    src={URL_IMG_LOGO}
                 />
             </div>
             <div className='navBar'>

@@ -1,4 +1,4 @@
-import { CDN_URL } from '../utils/constants'
+import { URL_IMG_RESTAURANT } from '../utils/constants'
 
 const RestaurantCard = (props) => {
     const { name, cuisines, rating, deliveryTime, imgCdn } = props
@@ -8,7 +8,7 @@ const RestaurantCard = (props) => {
             <img
                 alt='restaurantImg'
                 className='restaurantImg'
-                src={CDN_URL + imgCdn}
+                src={URL_IMG_RESTAURANT + imgCdn}
             />
             <div className='restaurantInfo'>
                 {/* <h5> {cuisines.join(' | ')} </h5> */}
