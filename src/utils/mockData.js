@@ -1,4 +1,4 @@
-const RESTAURANT_DATA = [
+export const RESTAURANT_DATA = [
     {
         "info": {
             "id": "12808",
@@ -1641,4 +1641,105 @@ const RESTAURANT_DATA = [
     }
 ]
 
-export default RESTAURANT_DATA
+export const SINGLE_RESTAURANT_DATA = {
+    "id": "123456",
+    "name": "Pizza Paradise",
+    "cloudinaryImageId": "rng/md/carousel/production/pizza123",
+    "locality": "MG Road",
+    "areaName": "Central District",
+    "costForTwo": "₹400 for two",
+    "costForTwoMessage": "₹400 for two",
+    "cuisines": [
+        "Pizza",
+        "Italian",
+        "Fast Food"
+    ],
+    "avgRating": 4.3,
+    "avgRatingString": "4.3",
+    "totalRatingsString": "10K+ ratings",
+    "sla": {
+        "deliveryTime": 30,
+        "lastMileTravel": 3.5,
+        "lastMileTravelString": "3.5 km",
+        "slaString": "30 mins"
+    }
+}
+
+export const MENU_DATA = [
+    {
+        "card": {
+            "info": {
+                "id": "item_001",
+                "name": "Margherita Pizza",
+                "category": "Pizza",
+                "description": "Classic delight with 100% real mozzarella cheese, fresh tomatoes, and basil",
+                "imageId": "pizza_margherita_123",
+                "price": 29900,
+                "defaultPrice": 29900
+            }
+        }
+    },
+    {
+        "card": {
+            "info": {
+                "id": "item_002",
+                "name": "Pepperoni Pizza",
+                "category": "Pizza",
+                "description": "American classic with spicy pepperoni slices and extra cheese",
+                "imageId": "pizza_pepperoni_456",
+                "price": 39900
+            }
+        }
+    },
+    {
+        "card": {
+            "info": {
+                "id": "item_003",
+                "name": "Veggie Supreme",
+                "category": "Pizza",
+                "description": "Loaded with fresh vegetables including bell peppers, onions, tomatoes, and olives",
+                "imageId": "pizza_veggie_789",
+                "price": 34900,
+                "defaultPrice": 34900
+            }
+        }
+    },
+    {
+        "card": {
+            "info": {
+                "id": "item_004",
+                "name": "BBQ Chicken Pizza",
+                "category": "Pizza",
+                "description": "Grilled chicken with tangy BBQ sauce, onions, and cheese",
+                "imageId": "pizza_bbq_chicken_101",
+                "price": 44900
+            }
+        }
+    },
+    {
+        "card": {
+            "info": {
+                "id": "item_005",
+                "name": "Hawaiian Pizza",
+                "category": "Pizza",
+                "description": "Tropical delight with ham, pineapple, and mozzarella cheese",
+                "imageId": "pizza_hawaiian_202",
+                "price": 42900,
+                "defaultPrice": 42900
+            }
+        }
+    },
+    {
+        "card": {
+            "info": {
+                "id": "item_006",
+                "name": "Coca Cola",
+                "category": "Beverages",
+                "description": "Chilled 500ml Coca Cola",
+                "imageId": "beverage_coke_707",
+                "price": 5900,
+                "defaultPrice": 5900
+            }
+        }
+    }
+]
