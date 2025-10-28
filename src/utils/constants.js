@@ -8,5 +8,5 @@ export const RESTAURANT_ENDPOINT = 'https://www.swiggy.com/dapi/restaurants/list
 export const MENU_ENDPOINT = 'https://namastedev.com/api/v1/listRestaurantMenu/'
 // export const MENU_ENDPOINT = 'https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=13.022211723133031&lng=77.6329953968525&restaurantId='
 
-
+export const IMG_ID_FOOD = 'e47e4e77-6b51-4c14-a166-b66315e04951_a42a91c8-bcc5-4302-830f-28d74c65959a.jpg'
 export const LOREM_IPSUM = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
