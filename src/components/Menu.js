@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom"
 import {
     IMG_ID_FOOD,
     URL_IMG_MENU,
-    MENU_ENDPOINT
+    ENDPOINT_MENU
 } from "../utils/constants"
 import {
     MENU_DATA,
@@ -25,7 +25,7 @@ const Menu = () => {
 
     const fetchMenu = async () => {
         try {
-            const res = await fetch(MENU_ENDPOINT + resId);
+            const res = await fetch(ENDPOINT_MENU + resId);
             const data = await res.json();
             const { data: { cards = [] } } = data
             // setMenu(MENU_DATA)

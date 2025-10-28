@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import Shimmer from './Shimmer'
 import RestaurantCard from './RestaurantCard'
 import { RESTAURANT_DATA } from '../utils/mockData'
-import { RESTAURANT_ENDPOINT } from '../utils/constants'
+import { ENDPOINT_RESTAURANT } from '../utils/constants'
 
 const Body = () => {
     const [allRestaurants, setAllRestaurants] = useState([])
@@ -16,9 +16,9 @@ const Body = () => {
 
     const fetchData = async () => {
         try {
-            const response = await fetch(RESTAURANT_ENDPOINT)
+            const response = await fetch(ENDPOINT_RESTAURANT)
             const data = await response.json()
-            const { card: { card: { gridElements: { infoWithStyle: { restaurants = [] } } } } } = data?.data?.cards[4]
+            const { card: { card: { gridElements: { infoWithStyle: { restaurants = [] } } } } } = data?.data?.data?.cards[1]
             setAllRestaurants(restaurants)
             setRestaurantList(restaurants)
         } catch (err) {
@@ -29,7 +29,7 @@ const Body = () => {
 
     const filterTopRestaurants = () => {
         const filteredRest = restaurantList.filter(item => {
-            return item.info.avgRating > 4
+            return item.info.avgRating > 4.3
         })
         setRestaurantList(filteredRest)
     }
