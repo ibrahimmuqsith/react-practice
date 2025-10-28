@@ -67,6 +67,11 @@
     display: grid;
     grid-template-columns: repeat(4, 0fr);
 
+    a {
+        color: #000;
+        text-decoration: none;
+    }
+
     .restaurantCard {
         background: #f0f0f0;
         border: 1px solid;
