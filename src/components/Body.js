@@ -4,6 +4,7 @@ import Shimmer from './Shimmer'
 import RestaurantCard from './RestaurantCard'
 import { RESTAURANT_DATA } from '../utils/mockData'
 import { ENDPOINT_RESTAURANT } from '../utils/constants'
+import { Link } from 'react-router-dom'
 
 const Body = () => {
     const [allRestaurants, setAllRestaurants] = useState([])
@@ -95,14 +96,18 @@ const Body = () => {
             </div>
             <div className='restContainer'>
                 {restaurantList.map(rest => (
-                    <RestaurantCard
+                    <Link
                         key={rest.info.id}
-                        name={rest.info.name}
-                        cuisines={rest.info.cuisines}
-                        rating={rest.info.avgRating}
-                        imgCdn={rest.info.cloudinaryImageId}
-                        deliveryTime={rest.info.sla.deliveryTime}
-                    />
+                        to={`/restaurants/${rest.info.id}`}
+                    >
+                        <RestaurantCard
+                            name={rest.info.name}
+                            cuisines={rest.info.cuisines}
+                            rating={rest.info.avgRating}
+                            imgCdn={rest.info.cloudinaryImageId}
+                            deliveryTime={rest.info.sla.deliveryTime}
+                        />
+                    </Link>
                 ))}
             </div>
         </div>
