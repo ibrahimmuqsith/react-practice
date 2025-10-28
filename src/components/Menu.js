@@ -15,6 +15,7 @@ const Menu = () => {
     const [menu, setMenu] = useState(null)
     const [restaurantInfo, setRestaurantInfo] = useState(null)
 
+    /* useParams hook helps fetch the dynamic vallues from url to use in comp */
     const { resId } = useParams()
     // resId = 123456 for namasteDev menu data
     // resId = 855614 for swiggy menu data

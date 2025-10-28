@@ -22,6 +22,15 @@ const App = () => {
     )
 }
 
+/*
+1. createBrowserRouter lets us create a router service in App
+2. Outlet ele acts as a placeholder for the appRouter created.
+3. here / path is the def path of app.
+4. all children paths are routes after the def route
+5. dynamic id in the static route is implemented by /:resId 
+6. errorElement lets us set a custom error comp instead of page break
+*/
+
 const appRouter = createBrowserRouter([
     {
         path: '/',
@@ -47,6 +56,13 @@ const appRouter = createBrowserRouter([
         ]
     }
 ])
+
+/*
+1. fetch the 'root' div of html ele
+2. attach it to root var of JS by createRoot of ReactDOM
+3. render the JS root var using render()
+4. pass the RouterProvider ele to render to implement routing 
+*/
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 // root.render(<App />)

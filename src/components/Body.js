@@ -25,7 +25,6 @@ const Body = () => {
         } catch (err) {
             console.log('something went Wrong', err)
         }
-
     }
 
     const filterTopRestaurants = () => {
