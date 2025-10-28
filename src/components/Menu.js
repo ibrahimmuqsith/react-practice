@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import {
-    IMG_ID_FOOD,
-    URL_IMG_MENU,
+    MENU_STATIC_IMG_ID,
+    CDN_IMG_MENU,
     ENDPOINT_MENU
 } from "../utils/constants"
 import {
@@ -80,8 +80,8 @@ const Menu = () => {
                                     </div>
                                     <div className="">
                                         <img
-                                            // src={URL_IMG_MENU + innerItem.card.info.imageId}
-                                            src={URL_IMG_MENU + IMG_ID_FOOD}
+                                            // src={CDN_IMG_MENU + innerItem.card.info.imageId}
+                                            src={CDN_IMG_MENU + MENU_STATIC_IMG_ID}
                                             alt="menuImg"
                                         />
                                     </div>
