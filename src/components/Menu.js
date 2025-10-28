@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import {
-    CDN_URL,
+    URL_IMG_MENU,
     MENU_ENDPOINT
 } from "../utils/constants"
 import {
@@ -49,29 +49,33 @@ const Menu = () => {
                     <p> {restaurantInfo?.cuisines.join(', ')} </p>
                     <p> {restaurantInfo?.totalRatingsString} </p>
                 </div>
-
-
             </div>
             <div className="menuInfo restContainer">
-
                 {menu.map((item) => (
                     <div
                         key={item.card.info.id}
-                        className="menuCard restaurantCard">
-                        <h5>
-                            {item.card.info.name}
-                        </h5>
-                        {/* <img
-                            src={CDN_URL + item.card.info.imageId}
-                            alt="menuImg"
-                        /> */}
-                        <h6>
-                            {item.card.info.price}
-                        </h6>
+                        className="menuCard restaurantCard flex-space-between"
+                    >
+                        <div className="">
+                            <h5>
+                                {item.card.info.name}
+                            </h5>
+                            <h6>
+                                Rs. {item.card.info.price / 100}
+                            </h6>
+                            <h6>
+                                serves {item.card.info.id}
+                            </h6>
+                        </div>
+                        {/* <div className="">
+                            <img
+                                src={URL_IMG_MENU + item.card.info.imageId}
+                                alt="menuImg"
+                            />
+                        </div> */}
                     </div>
                 ))}
             </div>
-
         </div>
     )
 }

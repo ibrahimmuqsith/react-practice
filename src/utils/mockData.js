@@ -1669,7 +1669,7 @@ export const MENU_DATA = [
     {
         "card": {
             "info": {
-                "id": "item_001",
+                "id": "1",
                 "name": "Margherita Pizza",
                 "category": "Pizza",
                 "description": "Classic delight with 100% real mozzarella cheese, fresh tomatoes, and basil",
@@ -1682,7 +1682,7 @@ export const MENU_DATA = [
     {
         "card": {
             "info": {
-                "id": "item_002",
+                "id": "2",
                 "name": "Pepperoni Pizza",
                 "category": "Pizza",
                 "description": "American classic with spicy pepperoni slices and extra cheese",
@@ -1694,7 +1694,7 @@ export const MENU_DATA = [
     {
         "card": {
             "info": {
-                "id": "item_003",
+                "id": "3",
                 "name": "Veggie Supreme",
                 "category": "Pizza",
                 "description": "Loaded with fresh vegetables including bell peppers, onions, tomatoes, and olives",
@@ -1707,7 +1707,7 @@ export const MENU_DATA = [
     {
         "card": {
             "info": {
-                "id": "item_004",
+                "id": "4",
                 "name": "BBQ Chicken Pizza",
                 "category": "Pizza",
                 "description": "Grilled chicken with tangy BBQ sauce, onions, and cheese",
@@ -1719,7 +1719,7 @@ export const MENU_DATA = [
     {
         "card": {
             "info": {
-                "id": "item_005",
+                "id": "5",
                 "name": "Hawaiian Pizza",
                 "category": "Pizza",
                 "description": "Tropical delight with ham, pineapple, and mozzarella cheese",
@@ -1732,7 +1732,7 @@ export const MENU_DATA = [
     {
         "card": {
             "info": {
-                "id": "item_006",
+                "id": "6",
                 "name": "Coca Cola",
                 "category": "Beverages",
                 "description": "Chilled 500ml Coca Cola",
