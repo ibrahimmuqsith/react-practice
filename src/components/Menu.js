@@ -67,12 +67,12 @@ const Menu = () => {
                                 serves {item.card.info.id}
                             </h6>
                         </div>
-                        {/* <div className="">
+                        <div className="">
                             <img
                                 src={URL_IMG_MENU + item.card.info.imageId}
                                 alt="menuImg"
                             />
-                        </div> */}
+                        </div>
                     </div>
                 ))}
             </div>

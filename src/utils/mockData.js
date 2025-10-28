@@ -1673,7 +1673,7 @@ export const MENU_DATA = [
                 "name": "Margherita Pizza",
                 "category": "Pizza",
                 "description": "Classic delight with 100% real mozzarella cheese, fresh tomatoes, and basil",
-                "imageId": "pizza_margherita_123",
+                "imageId": "e47e4e77-6b51-4c14-a166-b66315e04951_a42a91c8-bcc5-4302-830f-28d74c65959a.jpg",
                 "price": 29900,
                 "defaultPrice": 29900
             }
@@ -1686,7 +1686,7 @@ export const MENU_DATA = [
                 "name": "Pepperoni Pizza",
                 "category": "Pizza",
                 "description": "American classic with spicy pepperoni slices and extra cheese",
-                "imageId": "pizza_pepperoni_456",
+                "imageId": "e47e4e77-6b51-4c14-a166-b66315e04951_a42a91c8-bcc5-4302-830f-28d74c65959a.jpg",
                 "price": 39900
             }
         }
@@ -1698,7 +1698,7 @@ export const MENU_DATA = [
                 "name": "Veggie Supreme",
                 "category": "Pizza",
                 "description": "Loaded with fresh vegetables including bell peppers, onions, tomatoes, and olives",
-                "imageId": "pizza_veggie_789",
+                "imageId": "e47e4e77-6b51-4c14-a166-b66315e04951_a42a91c8-bcc5-4302-830f-28d74c65959a.jpg",
                 "price": 34900,
                 "defaultPrice": 34900
             }
@@ -1711,7 +1711,7 @@ export const MENU_DATA = [
                 "name": "BBQ Chicken Pizza",
                 "category": "Pizza",
                 "description": "Grilled chicken with tangy BBQ sauce, onions, and cheese",
-                "imageId": "pizza_bbq_chicken_101",
+                "imageId": "e47e4e77-6b51-4c14-a166-b66315e04951_a42a91c8-bcc5-4302-830f-28d74c65959a.jpg",
                 "price": 44900
             }
         }
@@ -1723,7 +1723,7 @@ export const MENU_DATA = [
                 "name": "Hawaiian Pizza",
                 "category": "Pizza",
                 "description": "Tropical delight with ham, pineapple, and mozzarella cheese",
-                "imageId": "pizza_hawaiian_202",
+                "imageId": "e47e4e77-6b51-4c14-a166-b66315e04951_a42a91c8-bcc5-4302-830f-28d74c65959a.jpg",
                 "price": 42900,
                 "defaultPrice": 42900
             }
@@ -1736,7 +1736,7 @@ export const MENU_DATA = [
                 "name": "Coca Cola",
                 "category": "Beverages",
                 "description": "Chilled 500ml Coca Cola",
-                "imageId": "beverage_coke_707",
+                "imageId": "e47e4e77-6b51-4c14-a166-b66315e04951_a42a91c8-bcc5-4302-830f-28d74c65959a.jpg",
                 "price": 5900,
                 "defaultPrice": 5900
             }
