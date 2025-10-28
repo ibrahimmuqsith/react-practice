@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react'
 
 import Shimmer from './Shimmer'
 import RestaurantCard from './RestaurantCard'
-import RESTAURANT_DATA from '../utils/mockData'
-import { RESTAURANT_API } from '../utils/constants'
+import { RESTAURANT_DATA } from '../utils/mockData'
+import { RESTAURANT_ENDPOINT } from '../utils/constants'
 
 const Body = () => {
     const [allRestaurants, setAllRestaurants] = useState([])
@@ -16,7 +16,7 @@ const Body = () => {
 
     const fetchData = async () => {
         try {
-            const response = await fetch(RESTAURANT_API)
+            const response = await fetch(RESTAURANT_ENDPOINT)
             const data = await response.json()
             const { card: { card: { gridElements: { infoWithStyle: { restaurants = [] } } } } } = data?.data?.cards[4]
             setAllRestaurants(restaurants)

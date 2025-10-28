@@ -1,16 +1,23 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
+import { MENU_ENDPOINT } from "../utils/constants"
+import { MENU_DATA } from "../utils/mockData"
 
 const Menu = () => {
+    const [menu, setMenu] = useState(null)
+
     useEffect(() => {
         fetchMenu()
     }, [])
 
     const fetchMenu = async () => {
-        const res = await fetch('https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=13.022211723133031&lng=77.6329953968525&restaurantId=855614&catalog_qa=undefined&submitAction=ENTER');
-        // if(res.status)
-        console.log("res.status", res.status)
-        // const data = await res.json();
-        // console.log("dara", data)
+        try {
+            // const res = await fetch(MENU_ENDPOINT);
+            // const data = await res.json();
+            // console.log("data", data)
+            setMenu(MENU_DATA)
+        } catch (err) {
+            console.log(err)
+        }
     }
 
     return (
