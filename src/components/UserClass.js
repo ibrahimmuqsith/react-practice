@@ -38,21 +38,46 @@ class UserClass extends Component {
 
     render() {
         // console.log("Child Render")
+        const {
+            name,
+            location,
+            company,
+            html_url,
+            login: userName = '',
+        } = this.state.userData
         return (
             <div className="userContainer">
                 {console.log("userData", this.state.userData)}
-                <h1> called from {this.props.componentType} Component </h1>
-                <h1> User: </h1>
-                <h2> User Name: </h2>
-                <button
-                    onClick={() => {
-                        this.setState({
-                            count: this.state.count + 1
-                        })
-                    }}
-                >
-                    Visitor No. {this.state.count}
-                </button>
+                <div className="restaurantCard">
+                    <h3> User: {name} </h3>
+                    <h3> UserName: {userName} </h3>
+                    <h3> Location: {location} </h3>
+                    <h3> Company: {company} </h3>
+                    <h3> Profile: <a href={html_url} target="blank"> gitHub </a></h3>
+                </div>
+
+                <hr />
+                <section className="lifeCycleMethodEg flex-space-between">
+                    <h5> called from {this.props.componentType} Component </h5>
+                    <button
+                        onClick={() => {
+                            this.setState({
+                                count: this.state.count + 1
+                            })
+                        }}
+                    >
+                        Visitor Count = {this.state.count}
+                    </button>
+                    <button
+                        onClick={() => {
+                            this.setState({
+                                count: 0
+                            })
+                        }}
+                    >
+                        Reset Visitor Count
+                    </button>
+                </section>
             </div>
         )
     }
