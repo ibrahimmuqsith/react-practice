@@ -13,6 +13,9 @@ class UserClass extends Component {
     */
     constructor(props) {
         super(props)
+        this.state = {
+            count: 0,
+        }
     }
 
     render() {
@@ -21,6 +24,15 @@ class UserClass extends Component {
                 <h1> called from {this.props.componentType} Component </h1>
                 <h1> User: </h1>
                 <h2> User Name: </h2>
+                <button
+                    onClick={() => {
+                        this.setState({
+                            count: this.state.count + 1
+                        })
+                    }}
+                >
+                    Visitor No. {this.state.count}
+                </button>
             </div>
         )
     }
