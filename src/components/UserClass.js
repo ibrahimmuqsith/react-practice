@@ -1,4 +1,7 @@
 import { Component } from "react";
+import {
+    ENDPOINT_USER_DATA
+} from "../utils/constants";
 
 /*
     1. Functonal Comp -> JS function
@@ -15,18 +18,29 @@ class UserClass extends Component {
         super(props)
         this.state = {
             count: 0,
+            userData: {},
         }
         console.log("Child Constructor")
     }
 
-    componentDidMount() {
-        console.log("Child ComponentDidiMount ")
+    /*
+        componentDidMount is the useEffect of clss component 8
+        All API calls can be made from componentDidMount just like useEffect
+    */
+    async componentDidMount() {
+        // console.log("Child ComponentDidiMount ")
+        const data = await fetch(ENDPOINT_USER_DATA)
+        const jsonData = await data.json()
+        this.setState({
+            userData: jsonData
+        })
     }
 
     render() {
-        console.log("Child Render")
+        // console.log("Child Render")
         return (
             <div className="userContainer">
+                {console.log("userData", this.state.userData)}
                 <h1> called from {this.props.componentType} Component </h1>
                 <h1> User: </h1>
                 <h2> User Name: </h2>
