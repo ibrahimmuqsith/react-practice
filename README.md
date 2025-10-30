@@ -20,7 +20,9 @@ Hooks
     useEffect       - Made API call after rendering the component.
 
 APIs
-    restaurants     - fetched restaurants List Data from swiggy
+    Swiggy          - fetched restaurants List Data from swiggy
+    NamasteDev      - https://namastedev.com/blog/restaurant-data-api-documentation/
+
 
 UX/UI
     Shimmer Loader  - created a customer shimmer comp to show loading
