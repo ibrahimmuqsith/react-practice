@@ -16,9 +16,15 @@ class UserClass extends Component {
         this.state = {
             count: 0,
         }
+        console.log("Child Constructor")
+    }
+
+    componentDidMount() {
+        console.log("Child ComponentDidiMount ")
     }
 
     render() {
+        console.log("Child Render")
         return (
             <div className="userContainer">
                 <h1> called from {this.props.componentType} Component </h1>
