@@ -24,11 +24,14 @@ class UserClass extends Component {
     }
 
     /*
-        componentDidMount is the useEffect of clss component 8
-        All API calls can be made from componentDidMount just like useEffect
+        1. constructor
+        2. render
+        3. componentDidMount
+        componentDidMount is the useEffect of class component,
+        like useEffect, API calls are made in componentDidMount.
     */
     async componentDidMount() {
-        // console.log("Child ComponentDidiMount ")
+        console.log("Child ComponentDidMount")
         const data = await fetch(ENDPOINT_USER_DATA)
         const jsonData = await data.json()
         this.setState({
@@ -36,24 +39,46 @@ class UserClass extends Component {
         })
     }
 
+    /*
+        1. update in state or Props
+        2. react triggers re-render
+        2. componentDidUpdate called
+    */
+    componentDidUpdate() {
+        console.log("called componentDidUpdate")
+    }
+
+    /*
+        called before comp removed from DOM
+    */
+    componentWillUnmount() {
+        console.log("componentWillUnmount: userClass removed from DOM")
+    }
+
     render() {
-        // console.log("Child Render")
+        console.log("Child Render")
         const {
             name,
             location,
             company,
             html_url,
+            avatar_url,
             login: userName = '',
         } = this.state.userData
         return (
             <div className="userContainer">
                 {console.log("userData", this.state.userData)}
-                <div className="restaurantCard">
-                    <h3> User: {name} </h3>
-                    <h3> UserName: {userName} </h3>
-                    <h3> Location: {location} </h3>
-                    <h3> Company: {company} </h3>
-                    <h3> Profile: <a href={html_url} target="blank"> gitHub </a></h3>
+                <div className="restaurantCard flex-space-between">
+                    <div className="userData">
+                        <h3> User: {name} </h3>
+                        <h3> UserName: {userName} </h3>
+                        <h3> Location: {location} </h3>
+                        <h3> Company: {company} </h3>
+                        <h3> Profile: <a href={html_url} target="blank"> gitHub </a></h3>
+                    </div>
+                    <div className="userImg">
+                        <img src={avatar_url} alt="avtr"></img>
+                    </div>
                 </div>
 
                 <hr />
