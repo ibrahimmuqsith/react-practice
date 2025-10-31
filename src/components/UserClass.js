@@ -37,6 +37,11 @@ class UserClass extends Component {
         this.setState({
             userData: jsonData
         })
+
+        // create a timer
+        this.timer = setInterval(() => {
+            console.log("calling Timer")
+        }, 1000)
     }
 
     /*
@@ -49,10 +54,16 @@ class UserClass extends Component {
     }
 
     /*
-        called before comp removed from DOM
+        componentWillUnmount - called before comp removed from DOM
     */
     componentWillUnmount() {
         console.log("componentWillUnmount: userClass removed from DOM")
+        /* 
+            In SPAs, there are no pages & ther changes are from one comp to another.
+            When a timer is created in any comp, it will run forever, since comp are just replaced.
+            this kills the performance & memory of app. Hence needs to be cleaned up.
+        */
+        clearInterval(this.timer)
     }
 
     render() {
