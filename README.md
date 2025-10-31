@@ -15,18 +15,24 @@ Footer
     Contact details
     Privacy
 
+-------------------------------------------------------------------------------------------------------
+
 Hooks
     useState        - Filtering top rated restaurant (rating more than 4*)
     useEffect       - Made API call after rendering the component.
+
+-------------------------------------------------------------------------------------------------------
 
 APIs
     Swiggy          - fetched restaurants List Data from swiggy
     NamasteDev      - https://namastedev.com/blog/restaurant-data-api-documentation/
 
+-------------------------------------------------------------------------------------------------------
 
 UX/UI
     Shimmer Loader  - created a customer shimmer comp to show loading
 
+-------------------------------------------------------------------------------------------------------
 
 1. Routings:
     1. Server Side Routing:
@@ -34,8 +40,20 @@ UX/UI
     2. Client Side Routing
         1. SPAs have routing on client side. `onClick()` of */about* nav bar menu routes to new components which already exists.
 
+-------------------------------------------------------------------------------------------------------
+
 Lifecycle Methods:
-    1. Class components order:
+    Mounting:
+        constructor
+        render
+        componentDidMount
+    Updating:
+        render
+        componentDidUpdate
+    Unmounting:
+        componentWillUnmount
+
+    Eg for batch mounting:
         - Parent constructor
         - Parent render
             - Child1 constructor
@@ -45,3 +63,5 @@ Lifecycle Methods:
             - Child1 componentDidMount
             - Child2 componentDidMount
         - Parent componentDidMount
+
+-------------------------------------------------------------------------------------------------------
