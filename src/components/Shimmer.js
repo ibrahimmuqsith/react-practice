@@ -1,7 +1,7 @@
 /* Shimmer comp acts like a placeholder or loader for whole comps */
 
 const Shimmer = (props) => {
-    const { cards, width, height } = props
+    const { cards = 8, width = 300, height = 250 } = props
     const items = Array.from({ length: cards })
 
     return (

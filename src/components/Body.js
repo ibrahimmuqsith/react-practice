@@ -54,15 +54,7 @@ const Body = () => {
 
     if (!onlineStatus) return <h1> {OFFLINE_MESSAGE} </h1>
 
-    if (restaurantList.length === 0) {
-        return (
-            <Shimmer
-                cards={8}
-                width={300}
-                height={250}
-            />
-        )
-    }
+    if (restaurantList.length === 0) return <Shimmer />
 
     return (
         <div className='bodyContainer'>
