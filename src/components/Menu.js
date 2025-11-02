@@ -10,41 +10,24 @@ import {
     SINGLE_RESTAURANT_DATA
 } from "../utils/mockData"
 import Shimmer from "./Shimmer"
+import useFetchData from "../utils/usefetchData"
 
 const Menu = () => {
-    const [menu, setMenu] = useState(null)
-    const [restaurantInfo, setRestaurantInfo] = useState(null)
-
     /* useParams hook helps fetch the dynamic vallues from url to use in comp */
     const { resId } = useParams()
-    // resId = 123456 for namasteDev menu data
-    // resId = 855614 for swiggy menu data
+    const data = useFetchData(ENDPOINT_MENU, resId)
 
-    useEffect(() => {
-        fetchMenu()
-    }, [])
-
-    const fetchMenu = async () => {
-        try {
-            const res = await fetch(ENDPOINT_MENU + resId);
-            const data = await res.json();
-            const { data: { cards = [] } } = data
-            // setMenu(MENU_DATA)
-            // setRestaurantInfo(SINGLE_RESTAURANT_DATA)
-            setRestaurantInfo(cards[2]?.card?.card?.info)
-            setMenu(cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards)
-        } catch (err) {
-            console.log(err)
-        }
-    }
-
-    if (!menu || !restaurantInfo) {
+    if (!data) {
         return <Shimmer
             cards={8}
             width={320}
             height={300}
         />
     }
+
+    const { cards = [] } = data
+    const { card: { card: { info: restaurantInfo = {} } } } = cards[2]
+    const { groupedCard: { cardGroupMap: { REGULAR: { cards: menu = {} } } } } = cards[4]
 
     return (
         <div className="menucontainer">

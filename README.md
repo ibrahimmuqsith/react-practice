@@ -9,30 +9,32 @@ Body
         Restaurant Ratings
         Restaurant Location
         Restaurant Cuisine
-        Restaurant Cuisine
 Footer
     T&C
     Contact details
     Privacy
 
--------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 
 Hooks
+    Hook            - JS utility function for a specific task.
     useState        - Filtering top rated restaurant (rating more than 4*)
     useEffect       - Made API call after rendering the component.
+    useParams       - react router DOM hook for finding parameters in url.
+    useFetchData    - custom hook to call an API and return response data.
 
--------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 
 APIs
     Swiggy          - fetched restaurants List Data from swiggy
     NamasteDev      - https://namastedev.com/blog/restaurant-data-api-documentation/
 
--------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 
 UX/UI
     Shimmer Loader  - created a customer shimmer comp to show loading
 
--------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 
 1. Routings:
     1. Server Side Routing:
@@ -40,7 +42,7 @@ UX/UI
     2. Client Side Routing
         1. SPAs have routing on client side. `onClick()` of */about* nav bar menu routes to new components which already exists.
 
--------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 
 Lifecycle Methods:
     Mounting:
@@ -64,4 +66,4 @@ Lifecycle Methods:
             - Child2 componentDidMount
         - Parent componentDidMount
 
--------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
