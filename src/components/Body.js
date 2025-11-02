@@ -3,13 +3,15 @@ import { useState, useEffect } from 'react'
 import Shimmer from './Shimmer'
 import RestaurantCard from './RestaurantCard'
 import { RESTAURANT_DATA } from '../utils/mockData'
-import { ENDPOINT_RESTAURANT } from '../utils/constants'
+import { ENDPOINT_RESTAURANT, OFFLINE_MESSAGE } from '../utils/constants'
 import { Link } from 'react-router-dom'
+import useOnlineStatus from '../utils/useOnlineStatus'
 
 const Body = () => {
     const [allRestaurants, setAllRestaurants] = useState([])
     const [restaurantList, setRestaurantList] = useState([])
     const [searchText, setSearchText] = useState('')
+    const onlineStatus = useOnlineStatus()
 
     useEffect(() => {
         fetchData();
@@ -49,6 +51,8 @@ const Body = () => {
         setSearchText('')
         setRestaurantList(allRestaurants)
     }
+
+    if (!onlineStatus) return <h1> {OFFLINE_MESSAGE} </h1>
 
     if (restaurantList.length === 0) {
         return (
