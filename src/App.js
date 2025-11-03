@@ -1,16 +1,28 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom'
 
 import Header from './components/Header'
 import Body from './components/Body'
-import About from './components/About'
+// import About from './components/About'
 import Contact from './components/Contact'
 import Menu from './components/Menu'
 import Error from './utils/Error'
+import { LOADING_MESSAGE } from './utils/constants'
 
 import './index.scss'
 
+
+/*
+    1. by def, all the above routes are loaded into a single bundle.
+    2. lazy loading <Grocery /> will split this component to another bundle
+    3. <Grocery /> will be called as that route is triggered from Nav bar.
+    4. In the app router, <Grocery /> is defined for a specific path.
+    5. It is enclosed with <Suspense /> describe lazy loading.
+    6. <Suspense> takes fallback JSX, i.e placeholder to be shown when that bundle is downloaded.
+*/
+const Grocery = lazy(() => import('./components/Grocery'))
+const About = lazy(() => import('./components/About'))
 
 const App = () => {
     return (
@@ -30,7 +42,6 @@ const App = () => {
     5. dynamic id in the static route is implemented by /:resId 
     6. errorElement lets us set a custom error comp instead of page break
 */
-
 const appRouter = createBrowserRouter([
     {
         path: '/',
@@ -43,11 +54,27 @@ const appRouter = createBrowserRouter([
             },
             {
                 path: '/about',
-                element: <About />
+                element: (
+                    <Suspense
+                        fallback={<h1> {LOADING_MESSAGE} </h1>}
+                    >
+                        <About />
+                    </Suspense>
+                )
             },
             {
                 path: '/contact',
                 element: <Contact />
+            },
+            {
+                path: '/grocery',
+                element: (
+                    <Suspense
+                        fallback={<h1> {LOADING_MESSAGE} </h1>}
+                    >
+                        <Grocery />
+                    </Suspense >
+                )
             },
             {
                 path: 'restaurants/:resId',
@@ -63,7 +90,6 @@ const appRouter = createBrowserRouter([
     3. render the JS root var using render()
     4. pass the RouterProvider ele to render to implement routing 
 */
-
 const root = ReactDOM.createRoot(document.getElementById('root'))
 // root.render(<App />)
 root.render(
