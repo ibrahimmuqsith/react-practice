@@ -36,12 +36,12 @@ class About extends Component {
         console.log("Parent Render")
         return (
             <div className='aboutContainer'>
-                {/* <UserClass
-                    componentType={'Class'}
-                /> */}
-                <User
+                <UserClass
                     componentType={'Class'}
                 />
+                {/* <User
+                    componentType={'Function'}
+                /> */}
             </div>
         )
     }
