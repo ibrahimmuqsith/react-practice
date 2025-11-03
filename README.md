@@ -1,3 +1,16 @@
+------------------------------------------------------------------------------------------------
+Parcel
+    - Bundler - combine all files to one JS file for browser.
+    - Set up Local server.
+    - HMP -> File watchig algo (C++).
+    - Minification, compressing, optimization.
+    - Dev Build. caching local -> faster Builds.
+    - Tree shaking -> remove unaccesses code.
+    - Code splitting / chunking / lazy loading / dynamic bundling.
+    - code Hashing & Obfuscation.
+
+------------------------------------------------------------------------------------------------
+
 Header
     Logo
     NavBar
