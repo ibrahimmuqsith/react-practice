@@ -11,6 +11,7 @@ import {
 } from "../utils/mockData"
 import Shimmer from "./Shimmer"
 import useFetchData from "../utils/usefetchData"
+import MenuByCategory from "./MenuByCategory"
 
 const Menu = () => {
     /* useParams hook helps fetch the dynamic vallues from url to use in comp */
@@ -42,37 +43,18 @@ const Menu = () => {
                     <p> {restaurantInfo?.totalRatingsString} </p>
                 </div>
             </div>
-            <div className="menuInfo restContainer">
+            <div className="menuInfo">
                 {menu.map((item) => {
-                    return (
-                        item?.card?.card?.itemCards?.map(innerItem => {
-                            return (
-                                <div
-                                    key={innerItem.card.info.id}
-                                    className="menuCard restaurantCard flex-space-between"
-                                >
-                                    <div className="">
-                                        <h5>
-                                            {innerItem.card.info.name}
-                                        </h5>
-                                        <h6>
-                                            Rs. {innerItem.card.info.price / 100}
-                                        </h6>
-                                        <h6>
-                                            serves {innerItem.card.info.id}
-                                        </h6>
-                                    </div>
-                                    <div className="">
-                                        <img
-                                            // src={CDN_IMG_MENU + innerItem.card.info.imageId}
-                                            src={CDN_IMG_MENU + MENU_STATIC_IMG_ID}
-                                            alt="menuImg"
-                                        />
-                                    </div>
-                                </div>
-                            )
-                        })
-                    )
+                    if (item?.card?.card?.itemCards) {
+                        return (
+                            <MenuByCategory
+                                key={item?.card?.card?.title}
+                                menucategoryTitle={item?.card?.card?.title}
+                                menuCategoryData={item?.card?.card?.itemCards}
+                            />
+                        )
+                    }
+
                 })}
             </div>
         </div>

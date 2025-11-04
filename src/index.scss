@@ -126,9 +126,9 @@
         max-width: 600px;
         margin: 30px auto;
         padding: 0 30px 30px;
-        background: gainsboro;
+        background: #F2BDCD;
         border-radius: 20px;
-        border: 15px solid gray;
+        border: 15px solid #D8A4B5;
     }
 }
 
@@ -154,5 +154,26 @@
         padding: 5px 20px;
         border-radius: 5px;
         background: #74db85;
+    }
+}
+
+.accordian {
+    max-width: 700px;
+    margin: auto;
+    margin-bottom: 10px;
+
+    .accordianContent {
+        padding: 0 50px;
+
+        .flex-space-between {
+            margin-top: 5px;
+            border-bottom: .5px solid #D8A4B5;
+        }
+    }
+
+    .accordianTitleContainer {
+        padding: 0 50px;
+        background: #F2BDCD;
+        border-bottom: 1px solid #D8A4B5;
     }
 }
