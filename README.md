@@ -45,7 +45,8 @@
 ------------------------------------------------------------------------------------------------
 
 5. UX/UI
-    1. Shimmer Loader  - created a customer shimmer comp to show loading
+    1. Shimmer Loader   - created a customer shimmer comp to show loading.
+    2. Accordian Tabs   - created a custom Accordian to display menu by category.
 
 ------------------------------------------------------------------------------------------------
 
@@ -89,5 +90,7 @@
     5. CSS Frameworks           - Bootstrap, MaterialUI, ChakraUI, SemanticsU I, AntDesign, etc
     6. TailwindCSS              - Tailwind uses postCSS -> transforming CSS with JavaScript
 
-9. HOC
-    1. JS fn with takes a comp as Input, enhances it & returns the comp.
+9. JS concepts:
+    1. HOC - JS fn with takes a comp as Input, enhances it & returns the comp.
+    2. Controlled comps: A comp which is managed (states) by its parent comp is controlled comp.
+    2. Uncontrolled comps: A comp which has no power (states) by its parent comp is an uncontrolled comp.
