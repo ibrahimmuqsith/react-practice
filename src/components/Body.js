@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
 import Shimmer from './Shimmer'
-import RestaurantCard from './RestaurantCard'
+import RestaurantCard, { withVegLabel } from './RestaurantCard'
 import { RESTAURANT_DATA } from '../utils/mockData'
 import { ENDPOINT_RESTAURANT, OFFLINE_MESSAGE } from '../utils/constants'
 import { Link } from 'react-router-dom'
@@ -11,7 +11,9 @@ const Body = () => {
     const [allRestaurants, setAllRestaurants] = useState([])
     const [restaurantList, setRestaurantList] = useState([])
     const [searchText, setSearchText] = useState('')
+
     const onlineStatus = useOnlineStatus()
+    const VegRestaurantCard = withVegLabel(RestaurantCard)
 
     useEffect(() => {
         fetchData();
@@ -95,13 +97,13 @@ const Body = () => {
                         key={rest.info.id}
                         to={`/restaurants/${rest.info.id}`}
                     >
-                        <RestaurantCard
-                            name={rest.info.name}
-                            cuisines={rest.info.cuisines}
-                            rating={rest.info.avgRating}
-                            imgCdn={rest.info.cloudinaryImageId}
-                            deliveryTime={rest.info.sla.deliveryTime}
-                        />
+                        {rest.info.veg
+                            ? <VegRestaurantCard
+                                restaurantData={rest.info} />
+                            : <RestaurantCard
+                                restaurantData={rest.info}
+                            />
+                        }
                     </Link>
                 ))}
             </div>

@@ -88,3 +88,6 @@
     4. Styled Components        - Open source styling - https://styled-components.com/
     5. CSS Frameworks           - Bootstrap, MaterialUI, ChakraUI, SemanticsU I, AntDesign, etc
     6. TailwindCSS              - Tailwind uses postCSS -> transforming CSS with JavaScript
+
+9. HOC
+    1. JS fn with takes a comp as Input, enhances it & returns the comp.

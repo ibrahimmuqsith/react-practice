@@ -4,7 +4,7 @@ import {
 } from '../utils/constants'
 
 const RestaurantCard = (props) => {
-    const { name, cuisines, rating, deliveryTime, imgCdn } = props
+    const { name, cuisines, rating, deliveryTime, imgCdn } = props.restaurantData
     return (
         <div className='restaurantCard'>
             <h3> {name} </h3>
@@ -22,6 +22,23 @@ const RestaurantCard = (props) => {
             <h6> Delivery Time: {deliveryTime} mins  </h6>
         </div>
     )
+}
+
+/*
+    1. withVegLabel function is a HOC or a Pure function.
+    2. Pure fns Dont change the input, but enhance it to give output.
+*/
+export const withVegLabel = (RestaurantCard) => {
+    return (props) => {
+        return (
+            <div className='withVegLabelContainer'>
+                <label> Pure Veg </label>
+                <RestaurantCard
+                    {...props}
+                />
+            </div>
+        )
+    }
 }
 
 export default RestaurantCard
