@@ -10,7 +10,7 @@ const Header = () => {
     const onlineStatus = useOnlineStatus()
 
     return (
-        <div className='flex'>
+        <div className='header'>
             <div className='logoContainer'>
                 <img
                     alt='logo'

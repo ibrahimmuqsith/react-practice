@@ -10,8 +10,9 @@ import Menu from './components/Menu'
 import Error from './utils/Error'
 import { LOADING_MESSAGE } from './utils/constants'
 
-// import './index.scss'
-import '../index.css'
+import './index.scss'
+// disbaled tailwindCSS coz of version issues
+// import '../index.css'
 
 
 /*
