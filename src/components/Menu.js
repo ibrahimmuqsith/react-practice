@@ -21,7 +21,11 @@ const Menu = () => {
     const data = useFetchData(ENDPOINT_MENU, resId)
 
     const handleClick = (index) => {
-        setShowIndex(index)
+        if (index === showIndex) {
+            setShowIndex(null)
+        } else {
+            setShowIndex(index)
+        }
     }
 
     if (!data) {

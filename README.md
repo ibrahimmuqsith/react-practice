@@ -93,4 +93,5 @@
 9. JS concepts:
     1. HOC - JS fn with takes a comp as Input, enhances it & returns the comp.
     2. Controlled comps: A comp which is managed (states) by its parent comp is controlled comp.
-    2. Uncontrolled comps: A comp which has no power (states) by its parent comp is an uncontrolled comp.
+        This gives power of lifting the states up to the parent.
+    3. Uncontrolled comps: A comp which has no power (states) by its parent comp is an uncontrolled comp.

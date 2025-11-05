@@ -4,6 +4,7 @@ import { CDN_IMG_MENU, MENU_STATIC_IMG_ID } from "../utils/constants"
 /*
     <MenuByCategory/> is a Controlled Component,
     since <Menu/> (the parent) is controlling its state & data
+    The idea is to lift the state of comp to its parent. 
 */
 const MenuByCategory = (props) => {
     const { menucategoryTitle, menuCategoryData, showContent, handleClick } = props
