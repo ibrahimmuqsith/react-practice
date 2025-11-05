@@ -1,4 +1,4 @@
-1. Parcel
+# Parcel
     1. Bundler - combine all files to one JS file for browser.
     2. Set up Local server.
     3. HMP -> File watchig algo (C++).
@@ -10,7 +10,7 @@
 
 ------------------------------------------------------------------------------------------------
 
-2. App Skeleton
+# App Skeleton
     1. Header
         1. Logo
         2. NavBar
@@ -29,7 +29,7 @@
 
 ------------------------------------------------------------------------------------------------
 
-3. Hooks
+# Hooks
     1. Hook            - JS utility function for a specific task.
     2. useState        - Filtering top rated restaurant (rating more than 4*)
     3. useEffect       - Made API call after rendering the component.
@@ -39,19 +39,19 @@
 
 ------------------------------------------------------------------------------------------------
 
-4. APIs
+# APIs
     1. Swiggy          - fetched restaurants List Data from swiggy
     2. NamasteDev      - https://namastedev.com/blog/restaurant-data-api-documentation/
 
 ------------------------------------------------------------------------------------------------
 
-5. UX/UI
+# UX/UI
     1. Shimmer Loader   - created a customer shimmer comp to show loading.
     2. Accordian Tabs   - created a custom Accordian to display menu by category.
 
 ------------------------------------------------------------------------------------------------
 
-6. Routings:
+# Routings:
     1. Server Side Routing:
         1. HTML pages have routing on servers. `onClick()` of */about* nav bar menu fetches a new page from server.
     2. Client Side Routing
@@ -59,7 +59,7 @@
 
 ------------------------------------------------------------------------------------------------
 
-7. Lifecycle Methods:
+# Lifecycle Methods:
     1. Mounting:
         1. constructor
         2. render
@@ -83,7 +83,7 @@
 
 ------------------------------------------------------------------------------------------------
 
-8. Styles for App
+# Styles for App
     1. Inline Styles
     2. style.css  / main.css    - Primitive, not trackable.
     3. SCSS / SASS              - Easy for devs, but not scalable.
@@ -93,7 +93,7 @@
 
 ------------------------------------------------------------------------------------------------
 
-9. Concepts implemented:
+# Concepts implemented:
     1. HOC:
         - JS fn with takes a comp as Input, enhances it & returns the comp.
     2. Controlled comps:
@@ -104,19 +104,46 @@
         - Passing data from the parent to multiple level child components via intermediate components.
         - It will complicate coding & code reading experience.
         - It will bloat components even when specific props are not used in certain components.
-    5. Context
-        - Central state storage accessible across the App.
-        - Context in class components:
-            - getData
-                - use <NAME_OF_CONTEXT_CREATED.Consumer> comp to get the context variable.
-                - If context name is `UserContext()` the wrapper comp will be <UserContext.Consumer>.
-            - setData
-                - use <NAME_OF_CONTEXT_CREATED.Provider> comp to update the context variable.
-                - If context name is `UserContext()` the wrapper comp will be <UserContext.Provider>.
-        - Context in functional components:
-            - getData
-                - use `useContext()` hook to get the context variable in comp.
-            - setData
-                - legacy code.
 
 ------------------------------------------------------------------------------------------------
+
+# Context API
+    - Central state storage accessible across the App.
+    - Context in class components:
+        - getData
+            - use <NAME_OF_CONTEXT_CREATED.Consumer> comp to get the context variable.
+            - If context name is `UserContext()` the wrapper comp will be <UserContext.Consumer>.
+        - setData
+            - use <NAME_OF_CONTEXT_CREATED.Provider> comp to update the context variable.
+            - If context name is `UserContext()` the wrapper comp will be <UserContext.Provider>.
+    - Context in functional components:
+        - getData
+            - use `useContext()` hook to get the context variable in comp.
+        - setData
+            - legacy code.
+
+------------------------------------------------------------------------------------------------
+
+# Jargons & Terminologies:
+    1.  Redux            - A JS state management technique for scalable apps.
+    2.  React-Redux      - Library to bridge React & Redux.
+    3.  Redux-Toolkit    - Latest updates on vanilla Redux.
+    4.  Store            - Global placeholder for all state variables.
+    5.  Slice            - Logical partitioning in a store (theme slice, user slice, cart slice)
+    6.  Subscribing      - Process of being in sync with the data from store.
+    7.  Selector         - It is used to read data (Subscribing) from store. 
+    8.  Dispatch         - Triggering a change action.
+    9.  Action           - JS object which tells what activity happend.
+    10. Reducer          - Pure Function which changes the value of store variable.
+    11. Flow             - when a interaction happens, it dispatches an action that calls a
+                            reducer fn to update the slice of the store.
+
+------------------------------------------------------------------------------------------------
+
+# RTK flow
+    1. install Redux Toolkit & React-Redux
+    2. Build a store 
+    3. Connect store to App
+    4. Slice
+    5. Dispatch Action
+    6. Selector Subscription
