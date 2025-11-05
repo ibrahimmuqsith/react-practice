@@ -7,9 +7,8 @@ import UserContext from "../utils/UserContext"
 
 const Header = () => {
     const [loginStatus, setLoginStatus] = useState('Login')
-
+    const { loggedInUser, setUserName } = useContext(UserContext)
     const onlineStatus = useOnlineStatus()
-    const { loggedInUser } = useContext(UserContext)
 
     return (
         <div className='header flex-space-between'>
@@ -32,7 +31,13 @@ const Header = () => {
                     <li
                         className="login"
                         onClick={() => {
-                            loginStatus === 'Login' ? setLoginStatus('Logout') : setLoginStatus('Login')
+                            if (loginStatus === 'Login') {
+                                setLoginStatus('Logout')
+                                setUserName('Muqsith')
+                            } else {
+                                setLoginStatus('Login')
+                                setUserName('')
+                            }
                         }}
                     >
                         {loginStatus}

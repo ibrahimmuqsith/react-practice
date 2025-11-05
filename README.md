@@ -105,3 +105,17 @@
         - It will bloat components even when specific props are not used in certain components.
     5. Context
         - Central state storage accessible across the App.
+        - Context in class components:
+            - getData
+                - use <NAME_OF_CONTEXT_CREATED.Consumer> comp to get the context variable.
+                - If context name is `UserContext()` the wrapper comp will be <UserContext.Consumer>.
+            - setData
+                - use <NAME_OF_CONTEXT_CREATED.Provider> comp to update the context variable.
+                - If context name is `UserContext()` the wrapper comp will be <UserContext.Provider>.
+        - Context in functional components:
+            - getData
+                - use `useContext()` hook to get the context variable in comp.
+            - setData
+                - legacy code.
+
+------------------------------------------------------------------------------------------------

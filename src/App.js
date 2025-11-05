@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react'
+import React, { lazy, Suspense, useEffect, useState } from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom'
 
@@ -12,6 +12,7 @@ import Footer from './components/Footer'
 import { LOADING_MESSAGE } from './utils/constants'
 
 import './index.scss'
+import UserContext from './utils/UserContext'
 // disbaled tailwindCSS coz of version issues
 // import '../index.css'
 
@@ -28,12 +29,20 @@ const Grocery = lazy(() => import('./components/Grocery'))
 const About = lazy(() => import('./components/About'))
 
 const App = () => {
+    const [userName, setUserName] = useState('')
+
+    useEffect(() => {
+        setUserName('')
+    }, [])
+
     return (
-        <div className='app'>
-            <Header />
-            <Outlet />
-            <Footer />
-        </div>
+        <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
+            <div className='app'>
+                <Header />
+                <Outlet />
+                <Footer />
+            </div >
+        </UserContext.Provider>
     )
 }
 
