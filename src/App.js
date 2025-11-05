@@ -8,6 +8,7 @@ import Body from './components/Body'
 import Contact from './components/Contact'
 import Menu from './components/Menu'
 import Error from './utils/Error'
+import Footer from './components/Footer'
 import { LOADING_MESSAGE } from './utils/constants'
 
 import './index.scss'
@@ -31,7 +32,7 @@ const App = () => {
         <div className='app'>
             <Header />
             <Outlet />
-            {/* <Footer /> */}
+            <Footer />
         </div>
     )
 }
