@@ -90,8 +90,18 @@
     5. CSS Frameworks           - Bootstrap, MaterialUI, ChakraUI, SemanticsU I, AntDesign, etc
     6. TailwindCSS              - Tailwind uses postCSS -> transforming CSS with JavaScript
 
-9. JS concepts:
-    1. HOC - JS fn with takes a comp as Input, enhances it & returns the comp.
-    2. Controlled comps: A comp which is managed (states) by its parent comp is controlled comp.
-        This gives power of lifting the states up to the parent.
-    3. Uncontrolled comps: A comp which has no power (states) by its parent comp is an uncontrolled comp.
+------------------------------------------------------------------------------------------------
+
+9. Concepts implemented:
+    1. HOC:
+        - JS fn with takes a comp as Input, enhances it & returns the comp.
+    2. Controlled comps:
+        - A comp which is managed (states) by its parent comp is controlled comp. This gives power of lifting the states up to the parent.
+    3. Uncontrolled comps:
+        - A comp which has no power (states) by its parent comp is an uncontrolled comp.
+    4. Prop Drilling:
+        - Passing data from the parent to multiple level child components via intermediate components.
+        - It will complicate coding & code reading experience.
+        - It will bloat components even when specific props are not used in certain components.
+    5. Context
+        - Central state storage accessible across the App.
