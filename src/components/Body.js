@@ -60,7 +60,7 @@ const Body = () => {
 
     return (
         <div className='bodyContainer'>
-            <div className='banner'>
+            <div className='banner flex-space-between'>
                 <div className='searchContainer'>
                     <input
                         name='search'

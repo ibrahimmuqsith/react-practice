@@ -14,8 +14,7 @@ const RestaurantCard = (props) => {
                 // src={CDN_IMG_RESTAURANT + imgCdn}
                 src={URL_STATIC_IMG_RESTAURANT}
             />
-            <div className='restaurantInfo'>
-                {/* <h5> {cuisines.join(' | ')} </h5> */}
+            <div className='flex-space-between'>
                 <h5> {cuisines[0]} </h5>
                 <h5> {rating} stars </h5>
             </div>
