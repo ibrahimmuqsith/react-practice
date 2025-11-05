@@ -1,7 +1,8 @@
-import { Component } from "react";
+import { Component, useContext } from "react";
 import {
     ENDPOINT_USER_DATA
 } from "../utils/constants";
+import UserContext from "../utils/UserContext";
 
 /*
     1. Functonal Comp -> JS function
@@ -76,11 +77,17 @@ class UserClass extends Component {
             avatar_url,
             login: userName = '',
         } = this.state.userData
+
         return (
             <div className="userContainer">
                 {console.log("userData", this.state.userData)}
                 <div className="restaurantCard flex-space-between">
                     <div className="userData">
+                        <h3> App Logged In user :
+                            <UserContext.Consumer>
+                                {(data) => <> {data.loggedInUser} </>}
+                            </UserContext.Consumer>
+                        </h3>
                         <h3> User: {name} </h3>
                         <h3> UserName: {userName} </h3>
                         <h3> Location: {location} </h3>
