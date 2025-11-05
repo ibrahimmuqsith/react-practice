@@ -108,18 +108,18 @@
 ------------------------------------------------------------------------------------------------
 
 # Context API
-    - Central state storage accessible across the App.
-    - Context in class components:
-        - getData
+    1. Central state storage accessible across the App.
+    2. Context in class components:
+        1. getData
             - use <NAME_OF_CONTEXT_CREATED.Consumer> comp to get the context variable.
             - If context name is `UserContext()` the wrapper comp will be <UserContext.Consumer>.
-        - setData
+        2. setData
             - use <NAME_OF_CONTEXT_CREATED.Provider> comp to update the context variable.
             - If context name is `UserContext()` the wrapper comp will be <UserContext.Provider>.
-    - Context in functional components:
-        - getData
+    3. Context in functional components:
+        1. getData
             - use `useContext()` hook to get the context variable in comp.
-        - setData
+        2. setData
             - legacy code.
 
 ------------------------------------------------------------------------------------------------
