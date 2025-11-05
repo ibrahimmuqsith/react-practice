@@ -1,9 +1,9 @@
 import React, { useContext } from "react"
-import UserContext from "../utils/userContext"
+import UserContext from "../utils/UserContext"
 
 const Footer = () => {
     const timestamp = new Date()
-
+    const { loggedInUser } = useContext(UserContext)
 
     return (
         <div className="appFooter flex-space-between">
@@ -11,7 +11,8 @@ const Footer = () => {
                 Privacy Policy
             </div>
             <div className="user">
-                Last logged in
+                Last logged in by
+                <strong> {loggedInUser} </strong>
                 at
                 <strong> {timestamp.toLocaleDateString()} </strong>
                 <strong> {timestamp.toLocaleTimeString()} </strong>
