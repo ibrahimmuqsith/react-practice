@@ -1,17 +1,16 @@
 import React, { useState } from "react"
 import { CDN_IMG_MENU, MENU_STATIC_IMG_ID } from "../utils/constants"
 
+/*
+    <MenuByCategory/> is a Controlled Component,
+    since <Menu/> (the parent) is controlling its state & data
+*/
 const MenuByCategory = (props) => {
-    const [showContent, setShowContent] = useState(false)
-    const { menucategoryTitle, menuCategoryData } = props
-
-    const showHideContent = (e) => {
-        setShowContent(!showContent)
-    }
+    const { menucategoryTitle, menuCategoryData, showContent, handleClick } = props
 
     return (
         <div className="accordian">
-            <div className="flex-space-between accordianTitleContainer" onClick={(e) => { showHideContent(e) }}>
+            <div className="flex-space-between accordianTitleContainer" onClick={(e) => { handleClick(e) }}>
                 <h3 className="accordianTitle"> {menucategoryTitle} ({menuCategoryData.length}) </h3>
                 <span> {showContent ? '🔼' : '🔽'}</span>
             </div>

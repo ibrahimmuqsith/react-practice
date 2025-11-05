@@ -14,9 +14,15 @@ import useFetchData from "../utils/usefetchData"
 import MenuByCategory from "./MenuByCategory"
 
 const Menu = () => {
-    /* useParams hook helps fetch the dynamic vallues from url to use in comp */
+    const [showIndex, setShowIndex] = useState(null)
+
+    /* useParams hook helps fetch the dynamic values from url */
     const { resId } = useParams()
     const data = useFetchData(ENDPOINT_MENU, resId)
+
+    const handleClick = (index) => {
+        setShowIndex(index)
+    }
 
     if (!data) {
         return <Shimmer
@@ -44,13 +50,15 @@ const Menu = () => {
                 </div>
             </div>
             <div className="menuInfo">
-                {menu.map((item) => {
+                {menu.map((item, index) => {
                     if (item?.card?.card?.itemCards) {
                         return (
                             <MenuByCategory
                                 key={item?.card?.card?.title}
                                 menucategoryTitle={item?.card?.card?.title}
                                 menuCategoryData={item?.card?.card?.itemCards}
+                                handleClick={() => { handleClick(index) }}
+                                showContent={index === showIndex ? true : false}
                             />
                         )
                     }
