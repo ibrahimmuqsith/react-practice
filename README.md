@@ -6,7 +6,7 @@
     5. Dev Build. caching local -> faster Builds.
     6. Tree shaking -> remove unaccesses code.
     7. Code splitting / chunking / lazy loading / dynamic bundling.
-    8. ode Hashing & Obfuscation.
+    8. Code Hashing & Obfuscation.
 
 ------------------------------------------------------------------------------------------------
 
@@ -35,6 +35,7 @@
     3. useEffect       - Made API call after rendering the component.
     4. useParams       - react router DOM hook for finding parameters in url.
     5. useFetchData    - custom hook to call an API and return response data.
+    6. useContext      - react context data state management implemented.
 
 ------------------------------------------------------------------------------------------------
 
