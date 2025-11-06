@@ -1,7 +1,5 @@
 import React, { useState } from "react"
-import { CDN_IMG_MENU, MENU_STATIC_IMG_ID } from "../utils/constants"
-import { useDispatch } from "react-redux"
-import { addItem } from "../utils/redux/cartSlice"
+import ItemList from "./ItemList"
 
 /*
     <MenuByCategory/> is a Controlled Component,
@@ -11,15 +9,6 @@ import { addItem } from "../utils/redux/cartSlice"
 const MenuByCategory = (props) => {
     const { menucategoryTitle, menuCategoryData, showContent, handleClick } = props
 
-    /**
-     * useDispatch hook is given by redux for creating a dispatch function.
-     */
-    const dispatch = useDispatch()
-
-    const handleAddItems = (item) => {
-        dispatch(addItem(item))
-    }
-
     return (
         <div className="accordian">
             <div className="flex-space-between accordianTitleContainer" onClick={(e) => { handleClick(e) }}>
@@ -28,29 +17,9 @@ const MenuByCategory = (props) => {
             </div>
             {showContent &&
                 <div className="accordianContent">
-                    {menuCategoryData?.map(menuItem => (
-                        <div className="flex-space-between" key={menuItem?.card?.info?.id}>
-                            <div className="">
-                                <h4> {menuItem?.card?.info?.name} </h4>
-                                <p> ₹{menuItem?.card?.info?.price / 100} </p>
-                                <p> Serves {menuItem?.card?.info?.id} </p>
-                                <p> Description - {menuItem?.card?.info?.description} </p>
-                            </div>
-                            <div className="" style={{ position: 'relative' }}>
-                                <img
-                                    // src={CDN_IMG_MENU + menuItem.card.info.imageId}
-                                    src={CDN_IMG_MENU + MENU_STATIC_IMG_ID}
-                                    alt="menuImg"
-                                />
-                                <button
-                                    className="addBtn"
-                                    onClick={() => handleAddItems(menuItem?.card?.info)}
-                                >
-                                    Add +
-                                </button>
-                            </div>
-                        </div>
-                    ))}
+                    <ItemList
+                        items={menuCategoryData}
+                    />
                 </div>
             }
         </div>
