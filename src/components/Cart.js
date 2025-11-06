@@ -7,6 +7,11 @@ import { Link } from "react-router-dom"
 const Cart = () => {
     const dispatch = useDispatch()
     const cartItems = useSelector((store) => (store.cart.items))
+    /**
+     * const cartItems = useSelector(store => store)
+     * this also works, but subscribing to whole store creates great performance issue.
+     * hence its optimized to be subscribe to only necessary slices of whole store.
+     */
 
     const handleClearAll = () => {
         dispatch(clearCart())
