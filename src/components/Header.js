@@ -1,5 +1,4 @@
 import React, { useContext, useState } from "react"
-// import logo from '../../assets/logo.png'
 import { URL_IMG_LOGO } from '../utils/constants'
 import { Link } from "react-router-dom"
 import useOnlineStatus from "../utils/useOnlineStatus"
@@ -10,6 +9,7 @@ const Header = () => {
     const [loginStatus, setLoginStatus] = useState('Login')
     const { loggedInUser, setUserName } = useContext(UserContext)
     const onlineStatus = useOnlineStatus()
+    const machineName = navigator.platform
 
     /**
      * subscribe to the redux store using useSelector Hook
@@ -23,7 +23,6 @@ const Header = () => {
                 <img
                     alt='logo'
                     className='logo'
-                    // src={logo}
                     src={URL_IMG_LOGO}
                 />
             </div>
@@ -40,7 +39,7 @@ const Header = () => {
                         onClick={() => {
                             if (loginStatus === 'Login') {
                                 setLoginStatus('Logout')
-                                setUserName('Muqsith')
+                                setUserName(machineName)
                             } else {
                                 setLoginStatus('Login')
                                 setUserName('')

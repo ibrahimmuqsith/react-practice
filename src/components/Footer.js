@@ -8,7 +8,12 @@ const Footer = () => {
     return (
         <div className="appFooter flex-space-between">
             <div className="privacy">
-                Privacy Policy
+                <a
+                    href="https://www.linkedin.com/in/muqsith-ibrahim/"
+                    target="_blank"
+                >
+                    Privacy Policy
+                </a>
             </div>
             <div className="user">
                 Last logged in by
