@@ -1,6 +1,9 @@
 import React, { lazy, Suspense, useEffect, useState } from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom'
+import UserContext from './utils/UserContext'
+import { Provider } from 'react-redux'
+import appStore from './utils/redux/appStore'
 
 import Header from './components/Header'
 import Body from './components/Body'
@@ -12,7 +15,6 @@ import Footer from './components/Footer'
 import { LOADING_MESSAGE } from './utils/constants'
 
 import './index.scss'
-import UserContext from './utils/UserContext'
 // disbaled tailwindCSS coz of version issues
 // import '../index.css'
 
@@ -36,13 +38,15 @@ const App = () => {
     }, [])
 
     return (
-        <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
-            <div className='app'>
-                <Header />
-                <Outlet />
-                <Footer />
-            </div >
-        </UserContext.Provider>
+        <Provider store={appStore}>
+            <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
+                <div className='app'>
+                    <Header />
+                    <Outlet />
+                    <Footer />
+                </div >
+            </UserContext.Provider>
+        </Provider>
     )
 }
 
