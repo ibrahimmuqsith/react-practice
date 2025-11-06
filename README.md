@@ -30,12 +30,16 @@
 ------------------------------------------------------------------------------------------------
 
 # Hooks
-    1. Hook            - JS utility function for a specific task.
-    2. useState        - Filtering top rated restaurant (rating more than 4*)
-    3. useEffect       - Made API call after rendering the component.
-    4. useParams       - react router DOM hook for finding parameters in url.
-    5. useFetchData    - custom hook to call an API and return response data.
-    6. useContext      - react context data state management implemented.
+    1.  Hook            - JS utility function for a specific task.
+    2.  useState        - Filtering top rated restaurant (rating more than 4*)
+    3.  useEffect       - Made API call after rendering the component.
+    4.  useParams       - react router DOM hook for finding parameters in url.
+    5.  useRouteError   - react router DOM hook for handling error details.
+    6.  useFetchData    - custom hook to call an API and return response data.
+    7.  useOnlineStatus - custom hook to see if user is connected to internet by 'online' eventListener.
+    8.  useContext      - react context data state management implemented.
+    9.  useDispatch     - redux hook to create a dispatch of action to store.
+    10. useSelector     - redux hook to subscribe to the store for data.
 
 ------------------------------------------------------------------------------------------------
 
