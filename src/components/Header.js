@@ -4,11 +4,17 @@ import { URL_IMG_LOGO } from '../utils/constants'
 import { Link } from "react-router-dom"
 import useOnlineStatus from "../utils/useOnlineStatus"
 import UserContext from "../utils/UserContext"
+import { useSelector } from "react-redux"
 
 const Header = () => {
     const [loginStatus, setLoginStatus] = useState('Login')
     const { loggedInUser, setUserName } = useContext(UserContext)
     const onlineStatus = useOnlineStatus()
+
+    /**
+     * subscribe to the redux store using useSelector Hook
+     */
+    const cartItems = useSelector((store) => store.cart.items)
 
     return (
         <div className='header flex-space-between'>
@@ -26,8 +32,8 @@ const Header = () => {
                     <li> <Link to="/about"> About </Link> </li>
                     <li> <Link to="/contact"> Contact </Link> </li>
                     <li> <Link to="/grocery"> Grocery </Link> </li>
-                    <li> Profile {onlineStatus ? '🟢' : '🔴'} </li>
-                    <li> User: {loggedInUser} </li>
+                    <li> Cart ({cartItems?.length}) </li>
+                    <li> {onlineStatus ? '🟢' : '🔴'} {loggedInUser} </li>
                     <li
                         className="login"
                         onClick={() => {
