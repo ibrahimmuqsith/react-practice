@@ -15,8 +15,8 @@ const ItemList = ({ items }) => {
 
     return (
         <div className="itemList">
-            {items?.map(items => (
-                <div className="flex-space-between" key={items?.card?.info?.id}>
+            {items?.map((items, id) => (
+                <div className="flex-space-between" key={id}>
                     <div className="">
                         <h4> {items?.card?.info?.name} </h4>
                         <p> ₹{items?.card?.info?.price / 100} </p>
@@ -31,7 +31,7 @@ const ItemList = ({ items }) => {
                         />
                         <button
                             className="addBtn"
-                            onClick={() => handleAddItems(items?.card?.info)}
+                            onClick={() => handleAddItems(items)}
                         >
                             Add +
                         </button>

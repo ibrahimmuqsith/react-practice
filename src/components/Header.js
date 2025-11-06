@@ -15,6 +15,7 @@ const Header = () => {
      * subscribe to the redux store using useSelector Hook
      */
     const cartItems = useSelector((store) => store.cart.items)
+    console.log("added cart Items", cartItems)
 
     return (
         <div className='header flex-space-between'>
@@ -32,7 +33,7 @@ const Header = () => {
                     <li> <Link to="/about"> About </Link> </li>
                     <li> <Link to="/contact"> Contact </Link> </li>
                     <li> <Link to="/grocery"> Grocery </Link> </li>
-                    <li> Cart ({cartItems?.length}) </li>
+                    <li> <Link to="/cart"> Cart ({cartItems?.length}) </Link> </li>
                     <li> {onlineStatus ? '🟢' : '🔴'} {loggedInUser} </li>
                     <li
                         className="login"

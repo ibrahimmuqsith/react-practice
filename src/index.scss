@@ -1,4 +1,4 @@
-#root p {
+body {
     margin: 0 !important;
 }
 
@@ -164,13 +164,6 @@
             margin-top: 5px;
             border-bottom: .5px solid #D8A4B5;
         }
-
-        .addBtn {
-            padding: 5px 10px;
-            position: absolute;
-            right: 10%;
-            bottom: 15%;
-        }
     }
 
     .accordianTitleContainer {
@@ -183,4 +176,21 @@
 .appFooter {
     padding: 15px;
     background: #f2bdcd;
+    position: fixed;
+    width: -webkit-fill-available;
+    bottom: 0;
+}
+
+.addBtn {
+    padding: 5px 10px;
+    position: absolute;
+    right: 10%;
+    bottom: 15%;
+}
+
+.itemList {
+    .flex-space-between {
+        margin-top: 5px;
+        border-bottom: .5px solid #D8A4B5;
+    }
 }

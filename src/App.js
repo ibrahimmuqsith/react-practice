@@ -5,6 +5,7 @@ import UserContext from './utils/UserContext'
 import { Provider } from 'react-redux'
 import appStore from './utils/redux/appStore'
 
+import Cart from './components/Cart'
 import Header from './components/Header'
 import Body from './components/Body'
 // import About from './components/About'
@@ -17,7 +18,6 @@ import { LOADING_MESSAGE } from './utils/constants'
 import './index.scss'
 // disbaled tailwindCSS coz of version issues
 // import '../index.css'
-
 
 /*
     1. by def, all the above routes are loaded into a single bundle.
@@ -91,6 +91,10 @@ const appRouter = createBrowserRouter([
                         <Grocery />
                     </Suspense >
                 )
+            },
+            {
+                path: '/cart',
+                element: <Cart />
             },
             {
                 path: 'restaurants/:resId',
