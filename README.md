@@ -153,3 +153,27 @@
     6. Selector Subscription
 
 ------------------------------------------------------------------------------------------------
+
+# Testing
+1. Unit Testing:
+    - testing a comp in isolation (without the context of other comps)
+    - eg: <header>, <SideBar>
+2. Integration Testing:
+    - testing a comp interacting with other comp.
+    - eg: searchBox & button filtering card comps.
+3. e2e Testing:
+    - testing the entire flow simulating a real user
+    - this is done by QA team
+4. RTL uses Testing Library. TL uses Jest. Jest uses Babel.
+5. Setting up
+    - Install react testing Library
+    - Install jest
+    - Install babel dependencies from jest site.
+    - configure babel config.
+    - configure .parcelrc to disable parcel def config.
+    - npm run test (check if all installation are right.)
+    - jest configuration.
+        - npx create-jest
+    - Install JS-dom library.
+
+------------------------------------------------------------------------------------------------
