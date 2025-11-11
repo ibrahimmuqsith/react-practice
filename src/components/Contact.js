@@ -10,6 +10,24 @@ const Contact = () => {
             <p>
                 {LOREM_IPSUM}
             </p>
+            <form>
+                <label> Name </label>
+                <input
+                    type='text'
+                    className='inputBox'
+                    placeholder='Enter name'
+                />
+
+                <label> Mobile Number </label>
+                <input
+                    type='text'
+                    className='inputBox'
+                    placeholder='Enter contact number'
+                />
+                <button type='submit'>
+                    Submit
+                </button>
+            </form>
         </div>
     )
 }

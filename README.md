@@ -175,5 +175,7 @@
     - jest configuration.
         - npx create-jest
     - Install JS-dom library.
+    - Install @babel/preset-react to make JSX work in babel config.
+    - Install @testing-library/jest-dom
 
 ------------------------------------------------------------------------------------------------
