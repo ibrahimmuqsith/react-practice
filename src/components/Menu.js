@@ -8,7 +8,7 @@ import {
 import {
     MENU_DATA,
     SINGLE_RESTAURANT_DATA
-} from "../utils/mockData"
+} from "./mockData/mockData"
 import Shimmer from "./Shimmer"
 import useFetchData from "../utils/hooks/useFetchData"
 import MenuByCategory from "./MenuByCategory"

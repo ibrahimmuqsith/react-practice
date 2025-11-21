@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 
 import Shimmer from './Shimmer'
 import RestaurantCard, { withVegLabel } from './RestaurantCard'
-import { RESTAURANT_DATA } from '../utils/mockData'
+import { RESTAURANT_DATA } from './mockData/mockData'
 import { ENDPOINT_RESTAURANT, OFFLINE_MESSAGE } from '../utils/constants'
 import { Link } from 'react-router-dom'
 import useOnlineStatus from '../utils/hooks/useOnlineStatus'
