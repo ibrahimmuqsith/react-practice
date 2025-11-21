@@ -10,7 +10,7 @@ import {
     SINGLE_RESTAURANT_DATA
 } from "../utils/mockData"
 import Shimmer from "./Shimmer"
-import useFetchData from "../utils/usefetchData"
+import useFetchData from "../utils/hooks/useFetchData"
 import MenuByCategory from "./MenuByCategory"
 
 const Menu = () => {

@@ -2,7 +2,7 @@ import { Component, useContext } from "react";
 import {
     ENDPOINT_USER_DATA
 } from "../utils/constants";
-import UserContext from "../utils/UserContext";
+import UserContext from "../utils/context/UserContext";
 
 /*
     1. Functonal Comp -> JS function

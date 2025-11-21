@@ -1,5 +1,5 @@
 import React, { useContext } from "react"
-import UserContext from "../utils/UserContext"
+import UserContext from "../utils/context/UserContext"
 
 const Footer = () => {
     const timestamp = new Date()

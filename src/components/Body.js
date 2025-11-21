@@ -5,7 +5,7 @@ import RestaurantCard, { withVegLabel } from './RestaurantCard'
 import { RESTAURANT_DATA } from '../utils/mockData'
 import { ENDPOINT_RESTAURANT, OFFLINE_MESSAGE } from '../utils/constants'
 import { Link } from 'react-router-dom'
-import useOnlineStatus from '../utils/useOnlineStatus'
+import useOnlineStatus from '../utils/hooks/useOnlineStatus'
 
 const Body = () => {
     const [allRestaurants, setAllRestaurants] = useState([])

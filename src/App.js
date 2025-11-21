@@ -1,7 +1,7 @@
 import React, { lazy, Suspense, useEffect, useState } from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom'
-import UserContext from './utils/UserContext'
+import UserContext from './utils/context/UserContext'
 import { Provider } from 'react-redux'
 import appStore from './utils/redux/appStore'
 
