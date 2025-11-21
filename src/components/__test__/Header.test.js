@@ -5,7 +5,7 @@ import "@testing-library/jest-dom"
 
 import Header from '../Header'
 import appStore from '../../utils/redux/appStore'
-import UserContext from "../../utils/UserContext"
+import UserContext from "../../utils/context/UserContext"
 
 
 describe('this test cases are for Header component', () => {
